@@ -15,7 +15,7 @@ public class RoutingUtils {
     }
 
     /**
-     * Forward to jsp page, attribute @currentPage will be
+     * Forward to jsp page, attribute currentPage will be
      * set in the page-template.jsp.
      *
      * @param jspPage  set page in page folder to which we want to forward.
@@ -54,6 +54,12 @@ public class RoutingUtils {
         response.getWriter().close();
     }
 
+    /**
+     * @param url      where to redirect
+     * @param request  HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws IOException sendRedirect()
+     */
     public static void redirect(String url, HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.sendRedirect(url);
     }
